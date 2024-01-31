@@ -1,0 +1,32 @@
+.modal, .overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.8);
+}
+.modalBody {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: black;
+    border: white 3px solid;
+    border-radius: 10px;
+    min-width: 200px;
+}
+
+.closeButton {
+    background: red;
+}
+
+.closeButton:hover {
+    background: lightcoral;
+}
