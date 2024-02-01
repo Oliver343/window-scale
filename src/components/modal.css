@@ -30,6 +30,7 @@
 
 .closeButton {
     background: red;
+    color: white;
 }
 
 .closeButton:hover {

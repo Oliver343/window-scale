@@ -13,7 +13,7 @@ code {
 }
 
 .wholePage {
-  min-height: 100vh;
+  height: 100vh;
   display:flex;
   flex-direction: column;
   align-items: stretch;
@@ -53,12 +53,18 @@ code {
 }
 
 .standardButton {
-  color: white;
+  color: black;
   padding-top: 10px;
   padding-bottom: 10px;
+  background: white;
+  border: black 3px solid;
+  border-radius: 10px;
+}
+
+.standardButtonDark {
+  color: white;
   background: black;
   border: white 3px solid;
-  border-radius: 10px;
 }
 
 .standardButton:hover {
