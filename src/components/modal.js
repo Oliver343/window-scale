@@ -10,8 +10,11 @@ const Modal = (props) => {
         <>
         <div className="modal" hidden={props.hidden}>
             <div className="overlay"></div>
-            <div className="modalBody">
+            <div className={"modalBody modalBody" + (props.darkMode ? "Dark" : "")}>
                 <h2>SETTINGS</h2>
+                <label for="dark" >Dark Mode:</label> <input name="dark" type="checkbox" onChange={(e) => props.darkFunction(e.target.checked)}/>
+                <br />
+                <br />
                 <button className="standardButton closeButton" onClick={() => props.hideFunction(true)}>CLOSE</button>
             </div>
         </div>

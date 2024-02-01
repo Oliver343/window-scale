@@ -7,6 +7,7 @@ const Main = () => {
     const [width, setWidth] = useState(window.innerWidth)
     const [height, setHeight] = useState(window.innerHeight)
     const [modalHide, setModalHide] = useState(true)
+    const [darkMode, setDarkMode] = useState(false)
 
     function handleResize() {
         setWidth(window.innerWidth)
@@ -14,23 +15,25 @@ const Main = () => {
       }
 
     window.addEventListener('resize', handleResize);
+
+    let darkModeConditional = darkMode ? "Dark" : ""
     
     return (
         // JSX html here
-        <div className="wholePage">
+        <div className={"wholePage wholePage" + darkModeConditional} >
 
-            <Modal hidden={modalHide} hideFunction={setModalHide} />
+            <Modal hidden={modalHide} darkMode={darkMode} hideFunction={setModalHide} darkFunction={setDarkMode} />
 
-            <div className="standardBorder headerBody"> 
+            <div className={"headerBody standardBorder standardBorder" + darkModeConditional}> 
                 <h2>Window Scale Demo</h2>
                 <button className="standardButton" onClick={() => setModalHide(false)}>SETTINGS</button>
             </div>
-            <div className="standardBorder mainBody">
+            <div className={"mainBody standardBorder standardBorder" + darkModeConditional}>
                 Width is: {width}
                 <br />
                 Height is: {height}
             </div>
-            <div className="standardBorder footerBody"> FOOTER </div>
+            <div className={"footerBody standardBorder standardBorder" + darkModeConditional}> FOOTER </div>
         </div>
     )
 }

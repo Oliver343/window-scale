@@ -17,10 +17,15 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: black;
-    border: white 3px solid;
+    background: white;
+    border: black 3px solid;
     border-radius: 10px;
     min-width: 200px;
+}
+
+.modalBodyDark {
+    background: black;
+    border: white 3px solid;
 }
 
 .closeButton {
