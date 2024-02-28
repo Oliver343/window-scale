@@ -3,7 +3,6 @@ import Modal from "../components/modal"
 
 const Main = () => {
     // variables here 
-    console.log("SAUSAGE")
     const [width, setWidth] = useState(window.innerWidth)
     const [height, setHeight] = useState(window.innerHeight)
     const [customWidth, setCustomWidth] = useState(920)
