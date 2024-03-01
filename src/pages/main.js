@@ -2,7 +2,6 @@ import React, {useState} from "react";
 import Modal from "../components/modal"
 
 const Main = () => {
-    // variables here 
     const [width, setWidth] = useState(window.innerWidth)
     const [height, setHeight] = useState(window.innerHeight)
     const [customWidth, setCustomWidth] = useState(920)
@@ -21,7 +20,6 @@ const Main = () => {
     let darkModeConditional = darkMode ? "Dark" : ""
     
     return (
-        // JSX html here
         <div className={"wholePage wholePage" + darkModeConditional} style={dynamicSize ? {} : {height: customHeight, width: customWidth}}>
 
             <Modal 
